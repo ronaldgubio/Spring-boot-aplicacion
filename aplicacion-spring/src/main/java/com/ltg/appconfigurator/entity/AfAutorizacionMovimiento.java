@@ -1,16 +1,10 @@
 package com.ltg.appconfigurator.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
 
-@Entity
-@Table(name = "AF_PARAMETRO")
 public class AfAutorizacionMovimiento {
 
-	@Id
 	private String PARA_CODIGO;
-	
+
 	private String PARA_NOMBRE;
 
 	public String getPARA_CODIGO() {
@@ -28,6 +22,5 @@ public class AfAutorizacionMovimiento {
 	public void setPARA_NOMBRE(String pARA_NOMBRE) {
 		PARA_NOMBRE = pARA_NOMBRE;
 	}
-	
-	
+
 }
