@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head></h:head>
+<h:body style="background-color:gray;">
+	<div
+		style="margin-top: 24px; background-color: white; width: 500px; margin-left: auto; margin-right: auto;">
+		<div style="padding: 100px;">
+			<h:form id="form">
+				<h:panelGrid columns="2" styleClass="">
+					<f:facet name="header">Ingreso al sistema</f:facet>
+					<h:outputText value="Usuario"></h:outputText>
+					<p:inputText value="#{indexController.usuario}"></p:inputText>
+					<h:outputText value="Contraseña"></h:outputText>
+					<p:password value="#{indexController.password}"></p:password>
+					<p:commandButton value="Ingresar"
+						actionListener="#{indexController.login()}"></p:commandButton>
+				</h:panelGrid>
+				<p:dataTable value="#{indexController.listaPrueba}" var="lista"
+				rowKey="#{lista.PARA_CODIGO}"
+				>
+					<p:column headerText="Id">
+						<h:outputText value="#{lista.PARA_CODIGO}"></h:outputText>
+					</p:column>
+					<p:column headerText="Nombre">
+						<h:outputText value="#{lista.PARA_NOMBRE}"></h:outputText>
+					</p:column>
+				</p:dataTable>
+			</h:form>
+		</div>
+	</div>
+</h:body>
+</html>
