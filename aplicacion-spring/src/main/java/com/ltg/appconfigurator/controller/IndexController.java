@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.ltg.appconfigurator.entity.AfAutorizacionMovimiento;
 import com.ltg.appconfigurator.service.LoginService;
 
+
 @ManagedBean(value = "indexController")
 @ViewScoped
 public class IndexController {
